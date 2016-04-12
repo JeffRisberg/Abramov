@@ -34,6 +34,7 @@ const mapStateProps = (
       state.visibilityFilter
   };
 };
+
 const mapDispatchProps = (
   dispatch,
   ownProps
