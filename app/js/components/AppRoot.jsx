@@ -6,7 +6,6 @@ import TodoList from './TodoList.jsx';
 import Footer from './Footer.jsx';
 import store from '../store';
 
-
 const TodoApp = () => (
   <div>
     <AddTodo />
