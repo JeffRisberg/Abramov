@@ -22,7 +22,7 @@ const todo = (state, action) => {
   }
 };
 
-const todos = (state = [], action) => {
+const todos = (state = [], action = {}) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -40,7 +40,7 @@ const todos = (state = [], action) => {
 
 const visibilityFilter = (
   state = 'SHOW_ALL',
-  action
+  action = {}
 ) => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
