@@ -27,26 +27,22 @@ const Link = ({
 const mapStateProps = (
   state,
   ownProps
-) => {
-  return {
+) => ({
     active:
       ownProps.filter ===
       state.visibilityFilter
-  };
-};
+  });
 
 const mapDispatchProps = (
   dispatch,
   ownProps
-) => {
-  return {
-    onClick: () => {
+) => ({
+    onClick() {
       dispatch(
         setVisibilityFilter(ownProps.filter)
       );
     }
-  };
-};
+  });
 
 const FilterLink = connect(
   mapStateProps,

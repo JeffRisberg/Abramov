@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
+
 
 const todo = (state, action) => {
   switch (action.type) {
@@ -55,4 +56,5 @@ const todoApp = combineReducers({
   visibilityFilter
 });
 
-export default createStore(todoApp)
+export default todoApp;
+
