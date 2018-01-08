@@ -4,7 +4,13 @@ import { Provider } from 'react-redux';
 import AddTodo from './AddTodo.jsx';
 import TodoList from './TodoList.jsx';
 import Footer from './Footer.jsx';
-import store from '../store';
+
+import configureStore from "../configureStore";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
+const store = configureStore();
+
 
 const TodoApp = () => (
   <div>
@@ -16,6 +22,10 @@ const TodoApp = () => (
 
 export default (
   <Provider store={store}>
-    <TodoApp />
+    <BrowserRouter>
+      <Switch >
+        <Route path="/" component={TodoApp} />
+      </Switch>
+    </BrowserRouter>
   </Provider>
 )
